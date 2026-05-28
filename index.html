@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#2f6d51" />
+    <meta name="description" content="森、水、雨、風、焚火、温泉、メロディを重ねて聴ける実録自然音ミキサー。" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Morioto" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <title>Morioto - 実録自然音ミキサー</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">REAL FIELD RECORDINGS</p>
+          <h1>Morioto</h1>
+          <p class="subtitle">森、水、雨、風。公開アーカイブの実録音だけで組む自然音ミキサー。</p>
+        </div>
+
+        <div class="global-panel" aria-label="全体コントロール">
+          <button class="icon-button" id="installApp" type="button" aria-label="アプリとしてインストール" title="アプリとしてインストール" hidden>
+            <span aria-hidden="true">+</span>
+          </button>
+          <button class="icon-button" id="randomBlend" type="button" aria-label="ランダムに音を重ねる" title="ランダムに音を重ねる">
+            <span aria-hidden="true">~</span>
+          </button>
+          <button class="icon-button" id="stopAll" type="button" aria-label="すべて停止" title="すべて停止">
+            <span aria-hidden="true">■</span>
+          </button>
+          <label class="master-control">
+            <span>Master</span>
+            <input id="masterVolume" type="range" min="0" max="100" value="78" />
+          </label>
+        </div>
+      </header>
+
+      <main class="main-grid">
+        <section class="control-column" aria-label="サウンドスケープ">
+          <div class="session-panel">
+            <div>
+              <p class="panel-label">Now</p>
+              <p class="session-name" id="sessionName">静かな待機</p>
+            </div>
+            <div class="meters" aria-hidden="true" id="meters">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="timer-panel" aria-label="タイマー">
+            <div class="panel-line">
+              <span class="panel-label">Timer</span>
+              <strong id="timerReadout">OFF</strong>
+            </div>
+            <div class="segmented" id="timerOptions"></div>
+          </div>
+
+          <div class="playing-panel">
+            <div class="panel-line">
+              <span class="panel-label">Layers</span>
+              <strong id="layerCount">0</strong>
+            </div>
+            <div class="active-list" id="activeList"></div>
+          </div>
+        </section>
+
+        <section class="library-column" aria-label="音源ライブラリ">
+          <nav class="tabs" id="categoryTabs" aria-label="カテゴリ"></nav>
+          <div class="sound-grid" id="soundGrid"></div>
+        </section>
+      </main>
+
+      <footer class="credits">
+        <button class="text-button" id="creditsToggle" type="button">音源の出典</button>
+        <div class="credits-list" id="creditsList" hidden></div>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

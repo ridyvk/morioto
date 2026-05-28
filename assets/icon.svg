@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Morioto</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f6d51"/>
+      <stop offset="0.55" stop-color="#2e7d91"/>
+      <stop offset="1" stop-color="#d59f37"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eaf4df"/>
+      <stop offset="1" stop-color="#9bc56b"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <path d="M134 321c76 14 153-25 196-93 20-32 29-66 31-94-48 8-106 31-148 75-36 38-59 78-79 112Z" fill="url(#leaf)"/>
+  <path d="M143 325c57-33 113-68 186-169" fill="none" stroke="#1f4638" stroke-width="18" stroke-linecap="round"/>
+  <path d="M132 350c42 26 83 39 124 39 60 0 104-27 134-63" fill="none" stroke="#fff7df" stroke-width="24" stroke-linecap="round"/>
+  <path d="M130 395c37 23 79 35 126 35 78 0 135-34 171-82" fill="none" stroke="#fff7df" stroke-width="16" stroke-linecap="round" opacity=".72"/>
+  <circle cx="129" cy="150" r="28" fill="#fff7df" opacity=".92"/>
+  <circle cx="384" cy="143" r="18" fill="#fff7df" opacity=".82"/>
+</svg>
